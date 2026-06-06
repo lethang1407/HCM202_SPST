@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trình Hồ Chí Minh",
+  "description": "Không gian trưng bày kỹ thuật số và hành trình lịch sử về cuộc đời, sự nghiệp và tư tưởng Hồ Chí Minh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
