@@ -1,24 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Play, Pause, ChevronLeft, ChevronRight, MapPin, Calendar, Compass } from 'lucide-react';
+import { Play, Pause, ChevronLeft, ChevronRight, MapPin, Calendar, Compass } from 'lucide-react';
 import { milestones } from '../data/museumData';
 import { Milestone } from '../types';
 
 export default function TimelineSection() {
   const [activeIndex, setActiveIndex] = useState(3); // Start with 1945 active!
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const synthRef = useRef<SpeechSynthesis | null>(null);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-
-  // Initialize Speech Synthesis
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.speechSynthesis) {
-      synthRef.current = window.speechSynthesis;
-    }
-    return () => {
-      stopSpeaking();
-    };
-  }, []);
 
   // Auto-play timeline loop
   useEffect(() => {
@@ -33,56 +20,15 @@ export default function TimelineSection() {
 
   const activeMilestone: Milestone = milestones[activeIndex];
 
-  const handleSpeech = () => {
-    if (!synthRef.current) return;
-
-    if (isSpeaking) {
-      stopSpeaking();
-      return;
-    }
-
-    // Custom text to read
-    const textToRead = `Năm ${activeMilestone.year}, sự kiện: ${activeMilestone.title}. Địa điểm: ${activeMilestone.location}. Chi tiết lịch sử: ${activeMilestone.richDetails}`;
-    
-    // Stop any existing speech
-    synthRef.current.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(textToRead);
-    utterance.lang = 'vi-VN';
-    utterance.rate = 0.95;
-
-    utterance.onend = () => {
-      setIsSpeaking(false);
-    };
-
-    utterance.onerror = () => {
-      setIsSpeaking(false);
-    };
-
-    utteranceRef.current = utterance;
-    setIsSpeaking(true);
-    synthRef.current.speak(utterance);
-  };
-
-  const stopSpeaking = () => {
-    if (synthRef.current) {
-      synthRef.current.cancel();
-    }
-    setIsSpeaking(false);
-  };
-
   const selectNode = (index: number) => {
-    stopSpeaking();
     setActiveIndex(index);
   };
 
   const handlePrev = () => {
-    stopSpeaking();
     setActiveIndex((prev) => (prev - 1 + milestones.length) % milestones.length);
   };
 
   const handleNext = () => {
-    stopSpeaking();
     setActiveIndex((prev) => (prev + 1) % milestones.length);
   };
 
@@ -125,11 +71,11 @@ export default function TimelineSection() {
         {/* Timeline Slider Nodes (Horizontal View) */}
         <div className="relative py-12 max-w-5xl mx-auto overflow-x-auto no-scrollbar scroll-smooth">
           {/* Main Connector Wire Line */}
-          <div className="absolute top-[48px] left-0 w-full h-[4px] bg-gray-255 bg-gray-200 rounded-full"></div>
+          <div className="absolute top-[52px] left-0 w-full h-[4px] bg-gray-255 bg-gray-200 rounded-full"></div>
           
           {/* Red Glowing Connector Wire Progress */}
           <div 
-            className="absolute top-[48px] left-0 h-[4.5px] bg-primary-red rounded-full transition-all duration-500"
+            className="absolute top-[52px] left-0 h-[4.5px] bg-primary-red rounded-full transition-all duration-500"
             style={{ width: `${(activeIndex / (milestones.length - 1)) * 100}%` }}
           ></div>
 
@@ -145,7 +91,7 @@ export default function TimelineSection() {
                 >
                   {/* Bubble circle indicator */}
                   <div 
-                    className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-all-custom duration-300 z-10 ${
+                    className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all-custom duration-300 z-10 ${
                       isActive 
                         ? 'bg-primary-red text-white scale-115 shadow-xl ring-8 ring-primary-red/20 border-4 border-white' 
                         : 'bg-white border-4 border-primary-red text-primary-red shadow-md hover:scale-108 hover:border-primary-red/80'
@@ -195,7 +141,7 @@ export default function TimelineSection() {
             <img 
               src={activeMilestone.image} 
               alt={activeMilestone.title} 
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
             />
             {/* Year Overlay Tag */}
             <div className="absolute top-4 left-4 bg-primary-red text-white font-display font-black text-lg md:text-xl py-1 px-4 rounded-lg shadow-md border border-white/20">
@@ -203,10 +149,6 @@ export default function TimelineSection() {
             </div>
             {/* Image gradient filter */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-            <div className="absolute bottom-4 left-4 text-white text-xs font-sans font-medium opacity-90 flex items-center gap-1">
-              <Compass className="w-3.5 h-3.5 animate-spin [animation-duration:15s]" />
-              Minh họa kỷ yếu lịch sử quân sự
-            </div>
           </div>
 
           {/* Right: Detailed text layout, including Audio Narration Speak Reader */}
@@ -230,18 +172,6 @@ export default function TimelineSection() {
                   {activeMilestone.title}
                 </h3>
 
-                {/* Speech Button Speaker indicator */}
-                <button
-                  onClick={handleSpeech}
-                  className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all cursor-pointer active:scale-90 ${
-                    isSpeaking 
-                      ? 'bg-primary-red border-primary-red text-white shadow-lg shadow-primary-red/20 animate-pulse' 
-                      : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-primary-red'
-                  }`}
-                  title={isSpeaking ? "Tắt âm thanh thuyết minh" : "Bật âm thanh thuyết minh lịch sử"}
-                >
-                  {isSpeaking ? <Volume2 className="w-5 h-5 animate-bounce" /> : <VolumeX className="w-5 h-5" />}
-                </button>
               </div>
 
               <p className="font-display font-bold text-gray-700 text-sm md:text-base leading-relaxed mb-4 border-l-3 border-primary-red/40 pl-3">
@@ -255,11 +185,10 @@ export default function TimelineSection() {
 
             {/* Quick control tip */}
             <div className="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-              <span>Bảo tàng tư liệu Quốc gia Việt Nam</span>
+              <span></span>
               <span>Cột mốc {activeIndex + 1} của {milestones.length}</span>
             </div>
           </div>
-
         </div>
 
       </div>

@@ -4,113 +4,62 @@ export const milestones: Milestone[] = [
   {
     id: 'm1',
     year: '1890',
-    shortYear: '90',
+    shortYear: '19/05',
     title: 'Sinh tại Nghệ An',
     location: 'Làng Sen, Kim Liên, Nam Đàn, Nghệ An',
     description: 'Chủ tịch Hồ Chí Minh (lúc nhỏ tên là Nguyễn Sinh Cung) sinh ra trong một gia đình nhà nho yêu nước.',
     richDetails: 'Sinh ngày 19 tháng 5 năm 1890 tại quê ngoại là làng Hoàng Trù (làng Chùa) và lớn lên ở làng Sen (làng Mắt). Thân phụ là cụ phó bảng Nguyễn Sinh Sắc, một nhà nho yêu nước, thân mẫu là bà Hoàng Thị Loan, người phụ nữ đảm đang, nhân hậu. Tuổi thơ của Người thấm đượm truyền thống yêu nước, hiếu học của quê hương và tình cảm gia đình ấm áp.',
-    image: 'https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80'
+    image: 'public/images/hcm_timeline_1.jpg'
   },
   {
     id: 'm2',
     year: '1911',
-    shortYear: '11',
+    shortYear: '05/06',
     title: 'Ra đi cứu nước',
     location: 'Bến cảng Nhà Rồng, Sài Gòn',
     description: 'Người lấy tên là Văn Ba, xuống tàu Amiral Latouche-Tréville ra đi tìm đường cứu nước.',
     richDetails: 'Ngày 5 tháng 6 năm 1911, từ Bến cảng Nhà Rồng, người thanh niên yêu nước Nguyễn Tất Thành dũng cảm bước chân ra đi tìm đường cứu nước trên con tàu Đô đốc Latouche-Tréville. Khác với các bậc tiền bối hướng sang phương Đông (Pháp, Nhật...), Người quyết định đi sang phương Tây - nơi khởi nguồn của tư tưởng "Tự do - Bình đẳng - Bác ái" để tìm hiểu thực chất và tìm kiếm con đường giải phóng thực sự cho đồng bào.',
-    image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80'
+    image: 'public/images/hcm_timeline_2.jpg'
   },
   {
     id: 'm3',
     year: '1930',
-    shortYear: '30',
+    shortYear: '03/02',
     title: 'Thành lập Đảng',
     location: 'Cửu Long, Hương Cảng (Hồng Kông)',
     description: 'Chủ trì Hội nghị hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam.',
-    richDetails: 'Từ ngày 6 tháng 1 đến ngày 7 tháng 2 năm 1930, tại bán đảo Cửu Long (Hương Cảng, Trung Quốc), Nguyễn Ái Quốc chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam. Hội nghị đã nhất trí thống nhất ba tổ chức cộng sản ở Việt Nam thành một Đảng duy nhất lấy tên là Đảng Cộng sản Việt Nam, thông qua Chính cương vắn tắt, Sách lược vắn tắt do Người soạn thảo.',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
+    richDetails: 'Từ ngày 3 đến 7-2-1930, tại bán đảo Cửu Long (Hương Cảng, Trung Quốc), Nguyễn Ái Quốc chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam. Hội nghị đã nhất trí thống nhất ba tổ chức cộng sản ở Việt Nam thành một Đảng duy nhất lấy tên là Đảng Cộng sản Việt Nam, thông qua Chính cương vắn tắt, Sách lược vắn tắt do Người soạn thảo.',
+    image: 'public/images/hcm_timeline_3.jpg'
   },
   {
     id: 'm4',
     year: '1945',
-    shortYear: '45',
+    shortYear: '02/09',
     title: 'Độc lập dân tộc',
     location: 'Quảng trường Ba Đình, Hà Nội',
     description: 'Đọc bản Tuyên ngôn Độc lập vĩ đại, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.',
     richDetails: 'Ngày 2 tháng 9 năm 1945, tại Quảng trường Ba Đình lịch sử, Chủ tịch Hồ Chí Minh thay mặt Chính phủ Lâm thời đọc bản Tuyên ngôn Độc lập, tuyên bố trước quốc dân đồng bào và thế giới về sự ra đời của nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa Xã hội Chủ nghĩa Việt Nam), khẳng định quyền tự do, độc lập thiêng liêng của dân tộc Việt Nam.',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLuaAUERRXegD_BGTHCod--NWBXUE7HHJ4cSPMAIAnVj1djUzBCLPUkMetEz-jPgJ4cVTgYsBAh5RVPhuWrJhDgDGwgAM4Rt2gvWSRo9PM0alRpsmE9vOCODGZRWVC1OXng3GrYGwmxbbN7mc-De5qcOTO6bDpPSaFCC8lKAyY_6f1S-WB0hx3-S0YOeqdsSl5CWkzhlOCPRsAAMaS707FQFEuT9HjZ5EnthxwlicKW83jnmD6zpNoo0xR4'
+    image: 'public/images/hcm_timeline_4.jpg'
   },
   {
     id: 'm5',
     year: '1954',
-    shortYear: '54',
+    shortYear: '07/05',
     title: 'Chiến thắng Điện Biên',
     location: 'Điện Biên Phủ, Tây Bắc',
     description: 'Lãnh đạo kháng chiến giành thắng lợi vang dội Điện Biên Phủ lừng lẫy năm châu.',
     richDetails: 'Chiến dịch Điện Biên Phủ thắng lợi hoàn toàn vào ngày 7 tháng 5 năm 1954 là đỉnh cao của cuộc kháng chiến chống thực dân Pháp xâm lược dưới sự lãnh đạo tài tình của Trung ương Đảng và Chủ tịch Hồ Chí Minh. Chiến thắng này đã đập tan hoàn toàn kế hoạch Navarre, buộc chính phủ Pháp phải ký kết Hiệp định Geneva về đình chỉ chiến sự ở Việt Nam, mở ra kỷ nguyên mới giải phóng miền Bắc.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80'
+    image: 'public/images/hcm_timeline_5.jpg'
   },
   {
     id: 'm6',
     year: '1969',
-    shortYear: '69',
+    shortYear: '02/09',
     title: 'Người đi xa',
     location: 'Hà Nội',
     description: 'Chủ tịch Hồ Chí Minh qua đời, để lại Di chúc lịch sử thiêng liêng và vô giá.',
     richDetails: 'Ngày 2 tháng 9 năm 1969, Chủ tịch Hồ Chí Minh từ trần tại Hà Nội, thọ 79 tuổi. Người ra đi để lại cho toàn Đảng, toàn quân và toàn dân bản Di chúc thiêng liêng gởi gắm khát vọng độc lập, thống nhất nước nhà, xây dựng chủ nghĩa xã hội và tấm lòng yêu thương vô hạn với đồng bào, chiến sĩ cả nước cũng như bầu bạn quốc tế.',
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80'
-  }
-];
-
-export const archiveItems: ArchiveItem[] = [
-  {
-    id: 'a1',
-    category: 'doclap',
-    title: 'Tuyên ngôn Độc lập',
-    description: 'Ngày 2/9/1945 lịch sử tại Quảng trường Ba Đình huyền thoại, Chủ tịch Hồ Chí Minh long trọng tuyên bố nền độc lập tự chủ khai sinh nước Việt Nam.',
-    year: '1945',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLuaAUERRXegD_BGTHCod--NWBXUE7HHJ4cSPMAIAnVj1djUzBCLPUkMetEz-jPgJ4cVTgYsBAh5RVPhuWrJhDgDGwgAM4Rt2gvWSRo9PM0alRpsmE9vOCODGZRWVC1OXng3GrYGwmxbbN7mc-De5qcOTO6bDpPSaFCC8lKAyY_6f1S-WB0hx3-S0YOeqdsSl5CWkzhlOCPRsAAMaS707FQFEuT9HjZ5EnthxwlicKW83jnmD6zpNoo0xR4'
-  },
-  {
-    id: 'a2',
-    category: 'khotulieu',
-    title: 'Không gian trải nghiệm số',
-    description: 'Hệ thống tương tác hỗ trợ trình diễn sơ đồ hành trình, tra cứu thông tin chi tiết qua các màn hình cảm ứng độ phân giải cao.',
-    year: 'Hiện đại',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBN8U8SJufY0ju7wE8Wq-Cz720Pz8k41s5sU6AQYx077YHiy2Vv8oft-t23gfmr2VdIWV3wYWn-3QNHvKDb9YoF7Xgs_alaS3k8YgZ8BTGIghQRfmvPGTEkMuLDeItCiGvxINEc03BHKmj-hLDLHp77DP1oqjjZKM5KKltTPH5PtjO7kh_1QlukGKIP3bjp5ZoX_mTaMJRB9LyipsrsYV5a_bmwqdviFm60_uwb_VaAkTrSiCj7OhPaaU7XkjURbm2fudNB9X4t5aM'
-  },
-  {
-    id: 'a3',
-    category: 'disan',
-    title: 'Người Cha già dân tộc',
-    description: 'Chân dung đặc tả Chủ tịch Hồ Chí Minh, toát lên phong thái giản dị, thanh tao, ánh mắt sáng ngời tinh anh và tình thương thương mến.',
-    year: 'Chân dung',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaR8t7K5cH84Q-lYtULT2oVEfz-pYy84Qt6rZww0HAnZSh05tJP9ju8VlAaqOvnNHmDG_p7js_2AxZrSiPCdkkc1XCJr5670-jrofZo0nAllGQZMYBsggQytURu-tWzNTrJcvCTkUDq5Idjey3iyhGm4cYLj901ivWfCxPaiejSBeylzpBdh5ATMnldqzLHTc4dGS8SAEqdC4OuIWjMiE2mksEQ4ntl-cwrq_U_kPtSyJ8A7uoRMHBDTvDZGYe_1hVbAR_8Nuh8Ls'
-  },
-  {
-    id: 'a4',
-    category: 'nienthieu',
-    title: 'Quê nội Hoàng Trù & Làng Sen Nghệ An',
-    description: 'Khung cảnh làng quê yên bình, đơn sơ nơi nuôi dưỡng tâm hồn và bản lĩnh kiên cường của cậu bé Nguyễn Sinh Cung thuở nhỏ.',
-    year: 'Thế kỷ XIX',
-    image: 'https://images.unsplash.com/photo-1543872084-c7da3822851f?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'a5',
-    category: 'conduong',
-    title: 'Nguyễn Ái Quốc tại Pháp',
-    description: 'Chân dung nhà hoạt động trẻ tuổi tràn đầy nhiệt huyết tại Đại hội Tua lịch sử, đấu tranh mạnh mẽ đòi quyền tự quyết cho dân tộc Việt Nam.',
-    year: '1920',
-    image: 'https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'a6',
-    category: 'khotulieu',
-    title: 'Hồ sơ tài liệu bút tích lịch sử',
-    description: 'Lưu trữ các văn bản cách mạng quan trọng: Bản án chế độ thực dân Pháp, Đường Kách mệnh, Lời kêu gọi toàn quốc kháng chiến.',
-    year: 'Lưu trữ',
-    image: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80'
+    image: 'public/images/hcm_timeline_6.jpg'
   }
 ];
 
@@ -162,5 +111,137 @@ export const quizQuestions: QuizQuestion[] = [
     ],
     answerIndex: 1,
     explanation: 'Chủ tịch Hồ Chí Minh sinh ra tại Nghệ An với tên khai sinh mang thuở nhỏ là Nguyễn Sinh Cung.'
+  },
+  {
+    id: 'q5',
+    question: "Tác phẩm 'Đường Kách Mệnh' do Nguyễn Ái Quốc viết, được xuất bản lần đầu vào năm nào?",
+    options: [
+      '1925',
+      '1927',
+      '1930',
+      '1941'
+    ],
+    answerIndex: 1,
+    explanation: "Tác phẩm 'Đường Kách Mệnh' là tập hợp các bài giảng của Nguyễn Ái Quốc tại các lớp huấn luyện cán bộ ở Quảng Châu, được xuất bản vào năm 1927. Đây là một văn kiện lý luận quan trọng, đặt nền móng tư tưởng cho cách mạng Việt Nam."
+  },
+  {
+    id: 'q6',
+    question: "Năm 1920, Nguyễn Ái Quốc đã đọc 'Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa' của ai, từ đó tìm ra con đường cứu nước?",
+    options: [
+      'Karl Marx',
+      'Friedrich Engels',
+      'V.I. Lenin',
+      'Joseph Stalin'
+    ],
+    answerIndex: 2,
+    explanation: "Vào tháng 7/1920, Nguyễn Ái Quốc đã đọc 'Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa' của V.I. Lenin. Luận cương đã giải đáp những vấn đề mà Người đang trăn trở, từ đó Người hoàn toàn tin theo Lenin và đi theo con đường Cách mạng Tháng Mười."
+  },
+  {
+    id: 'q7',
+    question: "Tên gọi 'Hồ Chí Minh' lần đầu tiên xuất hiện trong văn kiện chính thức nào?",
+    options: [
+      'Trong bản Tuyên ngôn Độc lập năm 1945',
+      'Khi tham gia Đại hội Tours năm 1920',
+      'Trong thư gửi cho các nhà lãnh đạo Đồng minh năm 1941',
+      'Khi thành lập Việt Minh năm 1941'
+    ],
+    answerIndex: 2,
+    explanation: "Tên gọi Hồ Chí Minh lần đầu tiên được sử dụng chính thức trong một bức điện và thư gửi cho các nhà lãnh đạo Đồng minh vào năm 1941, khi Người từ Trung Quốc chuẩn bị về nước lãnh đạo cách mạng."
+  },
+  {
+    id: 'q8',
+    question: "Chiến dịch nào được coi là đỉnh cao của nghệ thuật quân sự Việt Nam trong kháng chiến chống Pháp, dưới sự lãnh đạo của Chủ tịch Hồ Chí Minh?",
+    options: [
+      'Chiến dịch Việt Bắc - Thu Đông 1947',
+      'Chiến dịch Biên giới 1950',
+      'Chiến dịch Điện Biên Phủ 1954',
+      'Chiến dịch Hòa Bình 1951-1952'
+    ],
+    answerIndex: 2,
+    explanation: "Chiến dịch Điện Biên Phủ (1954) là thắng lợi quyết định, buộc thực dân Pháp phải ký Hiệp định Geneva, chấm dứt chiến tranh và lập lại hòa bình ở Đông Dương. Đây được coi là đỉnh cao của nghệ thuật quân sự Việt Nam."
+  },
+  {
+    id: 'q9',
+    question: "Năm 1941, sau hơn 30 năm bôn ba, Nguyễn Ái Quốc đã trở về nước và chọn địa điểm nào làm căn cứ địa cách mạng đầu tiên?",
+    options: [
+      'Tân Trào, Tuyên Quang',
+      'Pác Bó, Cao Bằng',
+      'Việt Bắc, Thái Nguyên',
+      'ATK Định Hóa, Thái Nguyên'
+    ],
+    answerIndex: 1,
+    explanation: "Ngày 28/1/1941, sau hơn 30 năm hoạt động ở nước ngoài, Nguyễn Ái Quốc đã trở về Tổ quốc và chọn Pác Bó (Cao Bằng) làm nơi xây dựng căn cứ địa, trực tiếp lãnh đạo phong trào cách mạng trong nước."
+  },
+  {
+    id: 'q10',
+    question: "Năm điều Bác Hồ dạy thiếu niên, nhi đồng được Bác gửi trong bức thư cuối cùng cho ngành giáo dục vào năm nào?",
+    options: [
+      '1945',
+      '1954',
+      '1961',
+      '1969'
+    ],
+    answerIndex: 2,
+    explanation: "Năm điều Bác Hồ dạy được trích từ bức thư Người gửi cho cán bộ, cô giáo, thầy giáo, công nhân viên, học sinh, sinh viên nhân dịp bắt đầu năm học mới, vào ngày 15/10/1968, nhưng được biết đến rộng rãi từ năm 1961."
+  },
+  {
+    id: 'q11',
+    question: "Tổ chức UNESCO đã vinh danh Chủ tịch Hồ Chí Minh là 'Anh hùng giải phóng dân tộc, Nhà văn hóa kiệt xuất' vào năm nào?",
+    options: [
+      '1969',
+      '1975',
+      '1987',
+      '1990'
+    ],
+    answerIndex: 2,
+    explanation: "Vào khóa họp 24 năm 1987, Tổ chức Giáo dục, Khoa học và Văn hóa của Liên Hợp Quốc (UNESCO) đã ra nghị quyết vinh danh Chủ tịch Hồ Chí Minh là 'Anh hùng giải phóng dân tộc, Nhà văn hóa kiệt xuất của Việt Nam'."
+  },
+  {
+    id: 'q12',
+    question: "Bài thơ 'Nguyên tiêu' (Rằm tháng Giêng) nổi tiếng của Chủ tịch Hồ Chí Minh được sáng tác trong hoàn cảnh nào?",
+    options: [
+      'Trong thời gian bị giam ở Trung Quốc',
+      'Trên đường đi công tác ở chiến khu Việt Bắc',
+      'Sau khi Cách mạng Tháng Tám thành công',
+      'Trong chuyến thăm hữu nghị một nước xã hội chủ nghĩa'
+    ],
+    answerIndex: 1,
+    explanation: "Bài thơ 'Nguyên tiêu' được Bác sáng tác vào mùa xuân năm 1948 tại chiến khu Việt Bắc, trong bối cảnh cuộc kháng chiến chống Pháp đang diễn ra. Bài thơ thể hiện tinh thần lạc quan, tin tưởng vào thắng lợi của cách mạng."
+  },
+  {
+    id: 'q13',
+    question: "Trong bản Di chúc, Chủ tịch Hồ Chí Minh đã bày tỏ mong muốn cuối cùng là gì?",
+    options: [
+      'Được hỏa táng và đặt tro ở ba miền đất nước',
+      'Xây dựng lăng thật to lớn',
+      'Được chôn cất tại quê nhà Nghệ An',
+      'Được ướp xác để nhân dân thăm viếng'
+    ],
+    answerIndex: 0,
+    explanation: "Trong Di chúc, Người viết: '...Tôi yêu cầu thi hài tôi được đốt đi, nói chữ là hỏa táng... Tro thì chia làm ba phần, bỏ vào ba cái hộp sành, một cho miền Bắc, một cho miền Trung, một cho miền Nam. Đồng bào mỗi miền nên chọn một quả đồi mà chôn hộp tro đó.'"
+  },
+  {
+    id: 'q14',
+    question: "Hội Việt Nam Cách mạng Thanh niên, tiền thân của Đảng Cộng sản Việt Nam, được Nguyễn Ái Quốc thành lập ở đâu?",
+    options: [
+      'Hương Cảng (Hồng Kông)',
+      'Paris (Pháp)',
+      'Moskva (Liên Xô)',
+      'Quảng Châu (Trung Quốc)'
+    ],
+    answerIndex: 3,
+    explanation: "Tháng 6/1925, tại Quảng Châu (Trung Quốc), Nguyễn Ái Quốc đã thành lập Hội Việt Nam Cách mạng Thanh niên, tập hợp những thanh niên yêu nước để truyền bá chủ nghĩa Mác-Lênin và chuẩn bị cho việc thành lập Đảng."
+  },
+  {
+    id: 'q15',
+    question: "Câu nói 'Không có gì quý hơn độc lập, tự do' được Chủ tịch Hồ Chí Minh nói trong bối cảnh nào?",
+    options: [
+      'Trong Tuyên ngôn Độc lập năm 1945',
+      'Trong lời kêu gọi toàn quốc kháng chiến năm 1946',
+      'Trong bài trả lời phỏng vấn nhà báo nước ngoài năm 1966',
+      'Trong bản Di chúc'
+    ],
+    answerIndex: 2,
+    explanation: "Câu nói bất hủ 'Không có gì quý hơn độc lập, tự do' là chân lý được Chủ tịch Hồ Chí Minh đúc kết, được nêu trong 'Lời kêu gọi chống Mỹ, cứu nước' ngày 17/7/1966, khi đế quốc Mỹ leo thang chiến tranh ở Việt Nam."
   }
 ];

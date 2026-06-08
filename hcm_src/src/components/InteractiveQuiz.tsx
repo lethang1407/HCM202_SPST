@@ -1,16 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { quizQuestions } from '../data/museumData';
 import { QuizQuestion } from '../types';
 import { Trophy, HelpCircle, Check, X, ArrowRight, RotateCcw, Award } from 'lucide-react';
 
+// Helper function to shuffle an array (Fisher-Yates algorithm)
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
+interface ProcessedQuizQuestion extends Omit<QuizQuestion, 'options' | 'answerIndex'> {
+  options: string[];
+  answerIndex: number;
+}
+
 export default function InteractiveQuiz() {
+  const [shuffledQuestions, setShuffledQuestions] = useState<ProcessedQuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [showFinishedState, setShowFinishedState] = useState(false);
 
-  const currentQuestion: QuizQuestion = quizQuestions[currentQuestionIndex];
+  const setupQuiz = () => {
+    const processedQuestions = shuffleArray(quizQuestions).map(q => {
+      const correctAnswer = q.options[q.answerIndex];
+      const shuffledOptions = shuffleArray(q.options);
+      const newAnswerIndex = shuffledOptions.indexOf(correctAnswer);
+      return {
+        ...q,
+        options: shuffledOptions,
+        answerIndex: newAnswerIndex,
+      };
+    });
+    setShuffledQuestions(processedQuestions);
+  };
+
+  useEffect(() => {
+    setupQuiz();
+  }, []);
+
+  const currentQuestion: ProcessedQuizQuestion | undefined = shuffledQuestions[currentQuestionIndex];
 
   const handleOptionClick = (index: number) => {
     if (isAnswered) return; // Prevent double clicking answers
@@ -18,7 +52,7 @@ export default function InteractiveQuiz() {
     setSelectedOptionIndex(index);
     setIsAnswered(true);
     
-    if (index === currentQuestion.answerIndex) {
+    if (currentQuestion && index === currentQuestion.answerIndex) {
       setScore((prev) => prev + 1);
     }
   };
@@ -27,7 +61,7 @@ export default function InteractiveQuiz() {
     setSelectedOptionIndex(null);
     setIsAnswered(false);
     
-    if (currentQuestionIndex + 1 < quizQuestions.length) {
+    if (currentQuestionIndex + 1 < shuffledQuestions.length) {
       setCurrentQuestionIndex((prev) => prev + 1);
     } else {
       setShowFinishedState(true);
@@ -40,6 +74,7 @@ export default function InteractiveQuiz() {
     setIsAnswered(false);
     setScore(0);
     setShowFinishedState(false);
+    setupQuiz(); // Re-shuffle for a new quiz
   };
 
   const getAwardTitle = (score: number, total: number) => {
@@ -49,7 +84,7 @@ export default function InteractiveQuiz() {
     return { title: 'Nhà Khám Phá Di Sản 🌱', desc: 'Tuyệt vời vì tinh thần học tập! Hãy khám phá thêm tàng thư nhé.' };
   };
 
-  const award = getAwardTitle(score, quizQuestions.length);
+  const award = getAwardTitle(score, shuffledQuestions.length);
 
   return (
     <section id="interactive-quiz-section" className="py-24 px-6 md:px-12 bg-white relative">
@@ -92,13 +127,13 @@ export default function InteractiveQuiz() {
                   stroke="#91000a" strokeWidth="10" 
                   fill="transparent" 
                   strokeDasharray={`${2 * Math.PI * 60}`}
-                  strokeDashoffset={`${2 * Math.PI * 60 * (1 - score / quizQuestions.length)}`}
+                  strokeDashoffset={`${2 * Math.PI * 60 * (1 - score / shuffledQuestions.length)}`}
                   className="transition-all duration-1000 ease-out"
                 />
               </svg>
               <div className="absolute text-center">
                 <span className="font-display text-4xl font-black text-gray-900">{score}</span>
-                <span className="text-gray-400 font-sans text-sm">/{quizQuestions.length}</span>
+                <span className="text-gray-400 font-sans text-sm">/{shuffledQuestions.length}</span>
               </div>
             </div>
 
@@ -120,16 +155,16 @@ export default function InteractiveQuiz() {
               Thực hiện lại khảo sát
             </button>
           </div>
-        ) : (
+        ) : currentQuestion ? (
           /* Quiz Question/Option Sheet */
           <div className="animate-fadeIn">
             {/* Question Step line */}
             <div className="flex justify-between items-center text-xs text-gray-400 font-sans mb-4 border-b border-gray-100 pb-3">
               <span className="font-bold flex items-center gap-1 text-gray-500">
                 <HelpCircle className="w-4 h-4 text-primary-red" />
-                Câu hỏi số {currentQuestionIndex + 1} của {quizQuestions.length}
+                Câu hỏi số {currentQuestionIndex + 1} của {shuffledQuestions.length}
               </span>
-              <span>Độ chính xác hiện tại: {score}/{quizQuestions.length}</span>
+              <span>Độ chính xác hiện tại: {score}/{shuffledQuestions.length}</span>
             </div>
 
             {/* Title question */}
@@ -186,13 +221,15 @@ export default function InteractiveQuiz() {
                   onClick={handleNext}
                   className="flex items-center gap-1.5 bg-primary-red hover:bg-primary-red/90 text-white font-bold text-xs md:text-sm px-6 py-3 rounded-xl transition-all shadow cursor-pointer active:scale-95"
                 >
-                  {currentQuestionIndex + 1 < quizQuestions.length ? 'Câu hỏi tiếp' : 'Xem kết quả'}
+                  {currentQuestionIndex + 1 < shuffledQuestions.length ? 'Câu hỏi tiếp' : 'Xem kết quả'}
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             )}
 
           </div>
+        ) : (
+          <div>Đang tải câu hỏi...</div>
         )}
 
       </div>

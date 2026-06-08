@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Eye, Award, Globe, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function BioLegacy() {
   const [selectedStat, setSelectedStat] = useState<number | null>(null);
@@ -36,14 +37,8 @@ export default function BioLegacy() {
               <img 
                 alt="Infographic thành tựu Hồ Chí Minh" 
                 className="w-full max-w-sm md:max-w-md mx-auto transition-transform duration-700 group-hover:scale-102"
-                src="https://lh3.googleusercontent.com/aida/AP1WRLsDzss_k3ZdKLJD0Sczz1m0hLGDhVLFi1g8QnbhvF5fHPRvFqYdK5kNoIxcxbKW8Z8XIibUieuc3Zn6idM6MYplGpT7P5ho2JKywK01cOITS_MmLq730W3nGKErUNdxsEbqZT6ikTltBwOFc0Q1ektbPoebO6_mL84Xm1Qco6D8qaN4vqRjehlLAW32bOyDOebvI5fSv5Bum6s7QWTrLqSXsr1umUmFDJpNsojOXjATcyMSD8TIkDlMkw"
+                src="public/images/hcm_1.png"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span className="bg-white/95 px-4 py-2 rounded-lg text-primary-red font-semibold text-xs flex items-center gap-1 shadow-md">
-                  <Eye className="w-4 h-4" />
-                  Di sản đồ họa kỷ niệm
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -53,7 +48,7 @@ export default function BioLegacy() {
           <span className="font-display text-xs md:text-sm font-extrabold text-primary-red tracking-widest uppercase block mb-3">
             Thành tựu vĩ đại
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-8">
             Một Cuộc Đời, Ngàn Di Sản
           </h2>
           
@@ -68,7 +63,7 @@ export default function BioLegacy() {
                   : 'bg-transparent border-gray-200/40 hover:bg-white/40 hover:border-gray-200'
               }`}
             >
-              <div className="text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
+              <div className="w-30 flex-shrink-0 text-center text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
                 30
               </div>
               <div className="flex-1">
@@ -100,7 +95,7 @@ export default function BioLegacy() {
                   : 'bg-transparent border-gray-200/40 hover:bg-white/40 hover:border-gray-200'
               }`}
             >
-              <div className="text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
+              <div className="w-30 flex-shrink-0 text-center text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
                 1945
               </div>
               <div className="flex-1">
@@ -132,7 +127,7 @@ export default function BioLegacy() {
                   : 'bg-transparent border-gray-200/40 hover:bg-white/40 hover:border-gray-200'
               }`}
             >
-              <div className="text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
+              <div className="w-30 flex-shrink-0 text-center text-primary-red font-display text-4xl md:text-5xl font-extrabold leading-none select-none">
                 ∞
               </div>
               <div className="flex-1">
@@ -154,10 +149,18 @@ export default function BioLegacy() {
                 )}
               </div>
             </div>
+          </div>
 
+          <div className="mt-10 text-center">
+            <Link
+              to="/quiz"
+              className="inline-flex items-center gap-2 bg-white text-primary-red font-bold text-sm px-8 py-3 rounded-xl transition-all shadow-md border border-primary-red/20 hover:bg-primary-red hover:text-white hover:border-primary-red cursor-pointer active:scale-95"
+            >
+              <Award className="w-4 h-4" />
+              Bắt đầu làm Quiz
+            </Link>
           </div>
         </div>
-
       </div>
     </section>
   );

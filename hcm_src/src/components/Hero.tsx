@@ -13,19 +13,15 @@ export default function Hero({ onScrollToTimeline, onScrollToBento }: HeroProps)
         <div className="absolute inset-0 bg-black/55 z-10"></div>
         <img 
           alt="Hành trình Hồ Chí Minh" 
-          className="w-full h-full object-cover object-top scale-102 animate-pulse [animation-duration:8s]"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLuO1NT-690VI74a77YUIZBdAeDTJVcQbpQ_Dmgm7Z7ktD3ThMRwCznsX37OAc8QOAv8OaUR3MjImsiXqRTdrxIt0MfPAPCwupd48ow9ZfwtukjOaYf2slQ0EL9_P9TopljuHbCunAE96NCn7SYoRYVtQNIwU2NPcx3qzAqCkXiXx1eSpMR9SGlpnpZdNT1LP6G35kz212qvP9zB4rsmitieOf27rf9-JBZ9YaZEd45t0UiM2Zcj7DK2hfU"
+          className="w-full h-full object-cover object-fit scale-102 animate-pulse [animation-duration:8s]"
+          src="public/images/hcm_homepage.jpg"
         />
       </div>
 
       {/* Main Hero Content */}
       <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-white text-xs font-semibold uppercase tracking-wider mb-8 select-none border border-white/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-ping"></span>
-          Trưng Bày Chuyên Đề Quốc Gia
-        </div>
 
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 max-w-5xl tracking-tight [text-wrap:balance]">
+        <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-extrabold text-white leading-tight mb-6 max-w-5xl tracking-tight [text-wrap:balance]">
           Hành Trình Cuộc Đời, Sự Nghiệp <br className="hidden md:block"/> Và Tư Tưởng Hồ Chí Minh
         </h1>
 
