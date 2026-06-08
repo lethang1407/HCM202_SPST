@@ -37,7 +37,7 @@ export default function BioLegacy() {
               <img 
                 alt="Infographic thành tựu Hồ Chí Minh" 
                 className="w-full max-w-sm md:max-w-md mx-auto transition-transform duration-700 group-hover:scale-102"
-                src="public/images/hcm_1.png"
+                src="/images/hcm_1.png"
               />
             </div>
           </div>

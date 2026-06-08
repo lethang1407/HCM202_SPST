@@ -14,7 +14,7 @@ export default function Hero({ onScrollToTimeline, onScrollToBento }: HeroProps)
         <img 
           alt="Hành trình Hồ Chí Minh" 
           className="w-full h-full object-cover object-fit scale-102 animate-pulse [animation-duration:8s]"
-          src="public/images/hcm_homepage.jpg"
+          src="/images/hcm_homepage.jpg"
         />
       </div>
 

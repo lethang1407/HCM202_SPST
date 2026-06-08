@@ -9,7 +9,7 @@ export const milestones: Milestone[] = [
     location: 'Làng Sen, Kim Liên, Nam Đàn, Nghệ An',
     description: 'Chủ tịch Hồ Chí Minh (lúc nhỏ tên là Nguyễn Sinh Cung) sinh ra trong một gia đình nhà nho yêu nước.',
     richDetails: 'Sinh ngày 19 tháng 5 năm 1890 tại quê ngoại là làng Hoàng Trù (làng Chùa) và lớn lên ở làng Sen (làng Mắt). Thân phụ là cụ phó bảng Nguyễn Sinh Sắc, một nhà nho yêu nước, thân mẫu là bà Hoàng Thị Loan, người phụ nữ đảm đang, nhân hậu. Tuổi thơ của Người thấm đượm truyền thống yêu nước, hiếu học của quê hương và tình cảm gia đình ấm áp.',
-    image: 'public/images/hcm_timeline_1.jpg'
+    image: '/images/hcm_timeline_1.jpg'
   },
   {
     id: 'm2',
@@ -19,7 +19,7 @@ export const milestones: Milestone[] = [
     location: 'Bến cảng Nhà Rồng, Sài Gòn',
     description: 'Người lấy tên là Văn Ba, xuống tàu Amiral Latouche-Tréville ra đi tìm đường cứu nước.',
     richDetails: 'Ngày 5 tháng 6 năm 1911, từ Bến cảng Nhà Rồng, người thanh niên yêu nước Nguyễn Tất Thành dũng cảm bước chân ra đi tìm đường cứu nước trên con tàu Đô đốc Latouche-Tréville. Khác với các bậc tiền bối hướng sang phương Đông (Pháp, Nhật...), Người quyết định đi sang phương Tây - nơi khởi nguồn của tư tưởng "Tự do - Bình đẳng - Bác ái" để tìm hiểu thực chất và tìm kiếm con đường giải phóng thực sự cho đồng bào.',
-    image: 'public/images/hcm_timeline_2.jpg'
+    image: '/images/hcm_timeline_2.jpg'
   },
   {
     id: 'm3',
@@ -29,7 +29,7 @@ export const milestones: Milestone[] = [
     location: 'Cửu Long, Hương Cảng (Hồng Kông)',
     description: 'Chủ trì Hội nghị hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam.',
     richDetails: 'Từ ngày 3 đến 7-2-1930, tại bán đảo Cửu Long (Hương Cảng, Trung Quốc), Nguyễn Ái Quốc chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam. Hội nghị đã nhất trí thống nhất ba tổ chức cộng sản ở Việt Nam thành một Đảng duy nhất lấy tên là Đảng Cộng sản Việt Nam, thông qua Chính cương vắn tắt, Sách lược vắn tắt do Người soạn thảo.',
-    image: 'public/images/hcm_timeline_3.jpg'
+    image: '/images/hcm_timeline_3.jpg'
   },
   {
     id: 'm4',
@@ -39,7 +39,7 @@ export const milestones: Milestone[] = [
     location: 'Quảng trường Ba Đình, Hà Nội',
     description: 'Đọc bản Tuyên ngôn Độc lập vĩ đại, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.',
     richDetails: 'Ngày 2 tháng 9 năm 1945, tại Quảng trường Ba Đình lịch sử, Chủ tịch Hồ Chí Minh thay mặt Chính phủ Lâm thời đọc bản Tuyên ngôn Độc lập, tuyên bố trước quốc dân đồng bào và thế giới về sự ra đời của nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa Xã hội Chủ nghĩa Việt Nam), khẳng định quyền tự do, độc lập thiêng liêng của dân tộc Việt Nam.',
-    image: 'public/images/hcm_timeline_4.jpg'
+    image: '/images/hcm_timeline_4.jpg'
   },
   {
     id: 'm5',
@@ -49,7 +49,7 @@ export const milestones: Milestone[] = [
     location: 'Điện Biên Phủ, Tây Bắc',
     description: 'Lãnh đạo kháng chiến giành thắng lợi vang dội Điện Biên Phủ lừng lẫy năm châu.',
     richDetails: 'Chiến dịch Điện Biên Phủ thắng lợi hoàn toàn vào ngày 7 tháng 5 năm 1954 là đỉnh cao của cuộc kháng chiến chống thực dân Pháp xâm lược dưới sự lãnh đạo tài tình của Trung ương Đảng và Chủ tịch Hồ Chí Minh. Chiến thắng này đã đập tan hoàn toàn kế hoạch Navarre, buộc chính phủ Pháp phải ký kết Hiệp định Geneva về đình chỉ chiến sự ở Việt Nam, mở ra kỷ nguyên mới giải phóng miền Bắc.',
-    image: 'public/images/hcm_timeline_5.jpg'
+    image: '/images/hcm_timeline_5.jpg'
   },
   {
     id: 'm6',
@@ -59,7 +59,7 @@ export const milestones: Milestone[] = [
     location: 'Hà Nội',
     description: 'Chủ tịch Hồ Chí Minh qua đời, để lại Di chúc lịch sử thiêng liêng và vô giá.',
     richDetails: 'Ngày 2 tháng 9 năm 1969, Chủ tịch Hồ Chí Minh từ trần tại Hà Nội, thọ 79 tuổi. Người ra đi để lại cho toàn Đảng, toàn quân và toàn dân bản Di chúc thiêng liêng gởi gắm khát vọng độc lập, thống nhất nước nhà, xây dựng chủ nghĩa xã hội và tấm lòng yêu thương vô hạn với đồng bào, chiến sĩ cả nước cũng như bầu bạn quốc tế.',
-    image: 'public/images/hcm_timeline_6.jpg'
+    image: '/images/hcm_timeline_6.jpg'
   }
 ];
 
