@@ -19,7 +19,7 @@ export default function YouthJourneyPage() {
       {/* Hero Section */}
       <header className="relative h-[70vh] flex items-center justify-center text-white text-center">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <img src="/images/bac-ho-banner.jpg" alt="Chủ tịch Hồ Chí Minh" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/bac-ho-banner.jpg" alt="Chủ tịch Hồ Chí Minh" className="absolute inset-0 w-full h-full object-cover object-" />
         <div className="relative z-20 p-10 bg-black/40 rounded-xl backdrop-blur-sm">
           <h1 className="font-display text-4xl md:text-6xl font-black tracking-tight">CHỦ TỊCH HỒ CHÍ MINH</h1>
           <p className="mt-2 text-lg md:text-xl text-white/90">Vị lãnh tụ vĩ đại của dân tộc Việt Nam</p>
