@@ -29,7 +29,9 @@ export default function Navbar({ onOpenVirtualTour }: NavbarProps) {
     { label: 'Hoạt động cách mạng', path: '/hoat-dong-cach-mang' },
     { label: 'Các giai đoạn lịch sử', path: '/cac-giai-doan-lich-su' },
     { label: 'Kho Tư Liệu', path: '/kho-tu-lieu' },
+    { label: 'Bảo Tàng Trực Tuyến', path: '/bao-tang-truc-tuyen' },
     { label: 'Tư Tưởng Hồ Chí Minh', path: '/tu-tuong-ho-chi-minh' },
+    { label: 'Tư Tưởng & Đạo Đức', path: '/tu-tuong-dao-duc' },
     { label: 'Giá Trị Hiện Nay', path: '/gia-tri-hien-nay' },
     { label: 'Quiz', path: '/quiz' },
   ];
