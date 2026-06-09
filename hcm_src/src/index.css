@@ -38,3 +38,20 @@
 .timeline-gradient {
   background: linear-gradient(90deg, transparent 0%, #91000a 50%, transparent 100%);
 }
+
+@utility perspective {
+  perspective: 1000px;
+}
+
+@utility transform-style {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@utility rotate-y-180 {
+  transform: rotateY(180deg);
+}
