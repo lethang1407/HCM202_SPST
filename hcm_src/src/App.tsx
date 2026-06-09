@@ -7,6 +7,7 @@ import BioLegacy from './components/BioLegacy';
 import TimelineSection from './components/TimelineSection';
 import YouthJourneyPage from './pages/YouthJourneyPage';
 import QuizPage from './pages/QuizPage';
+import IdeologyPage from './pages/IdeologyPage';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="tuoi-tre-va-hanh-trinh" element={<YouthJourneyPage />} />
           <Route path="quiz" element={<QuizPage />} />
+          <Route path="tu-tuong-ho-chi-minh" element={<IdeologyPage />} />
           {/* Các route cho P3-P7 có thể được thêm vào đây trong tương lai */}
         </Route>
       </Routes>
