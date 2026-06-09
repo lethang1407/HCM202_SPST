@@ -10,6 +10,8 @@ import QuizPage from './pages/QuizPage';
 import IdeologyPage from './pages/IdeologyPage';
 import RevolutionaryActivitiesPage from './pages/RevolutionaryActivitiesPage.tsx';
 import ArchivePage from './pages/ArchivePage';
+import HistoryPeriodsPage from './pages/HistoryPeriodsPage';
+import CurrentValuesPage from './pages/CurrentValuesPage';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="quiz" element={<QuizPage />} />
           <Route path="tu-tuong-ho-chi-minh" element={<IdeologyPage />} />
           <Route path="kho-tu-lieu" element={<ArchivePage />} />
+          <Route path="cac-giai-doan-lich-su" element={<HistoryPeriodsPage />} />
+          <Route path="gia-tri-hien-nay" element={<CurrentValuesPage />} />
           {/* Các route cho P3-P7 có thể được thêm vào đây trong tương lai */}
         </Route>
       </Routes>
